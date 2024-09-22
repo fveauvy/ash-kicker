@@ -1,0 +1,55 @@
+{
+  "Common": {
+    "title": "Ash Kicker",
+    "language": "Langue",
+    "searchLanguage": "Rechercher une langue...",
+    "noLanguageFound": "Aucune langue trouvée.",
+    "backToHome": "Retour à l'accueil"
+  },
+  "AshKicker": {
+    "moneySaved": "Argent Économisé",
+    "cigarettesNotSmoked": "Cigarettes Non Fumées",
+    "daysOfLifeGained": "Jours de Vie Gagnés",
+    "daysSinceQuitting": "Jours Depuis l'Arrêt"
+  },
+  "Config": {
+    "title": "Configuration",
+    "cigarettesPerDay": "Cigarettes par jour",
+    "pricePerPack": "Prix par paquet (€)",
+    "cigarettesPerPack": "Cigarettes par paquet",
+    "minutesOfLifePerCigarette": "Minutes de vie par cigarette",
+    "learnMore": "En savoir plus sur cette statistique",
+    "quitDate": "Date d'arrêt",
+    "save": "Enregistrer",
+    "settingsSaved": "Paramètres Enregistrés",
+    "settingsSavedDescription": "Votre configuration a été mise à jour avec succès.",
+    "quitDateCallout": "Veuillez entrer la date à laquelle vous avez arrêté de fumer et vos habitudes de fumeur pour calculer votre progression."
+  },
+  "MoneySaved": {
+    "title": "Argent Économisé",
+    "daily": "Par Jour",
+    "weekly": "Par Semaine",
+    "monthly": "Par Mois",
+    "yearly": "Par An",
+    "total": "Total"
+  },
+  "CigarettesNotSmoked": {
+    "title": "Cigarettes Non Fumées",
+    "daily": "Par Jour",
+    "weekly": "Par Semaine",
+    "monthly": "Par Mois",
+    "yearly": "Par An",
+    "total": "Total"
+  },
+  "LifeGained": {
+    "title": "Vie Gagnée",
+    "daily": "Par Jour",
+    "weekly": "Par Semaine",
+    "monthly": "Par Mois",
+    "yearly": "Par An",
+    "total": "Total",
+    "hours": "heures",
+    "days": "jours",
+    "minutes": "minutes"
+  }
+}
