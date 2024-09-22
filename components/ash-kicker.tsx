@@ -4,8 +4,10 @@ import { useState, useEffect } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { useTranslations } from "next-intl";
 import Link from "next/link";
-import { useConfig } from "@/hooks/use-config";
+import { useConfig } from "@/contexts/config-context";
 import { calculateStats } from "@/lib/calculations";
+import { Calendar, Cigarette, EuroIcon, Heart } from "lucide-react";
+import { formatPrice } from "@/lib/utils";
 
 export default function AshKicker() {
   const t = useTranslations("AshKicker");
@@ -28,16 +30,37 @@ export default function AshKicker() {
       <div className="max-w-3xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <Link
+            href="/days-since-quitting"
+            className="transition-transform hover:scale-105"
+          >
+            <Card className="h-full transition-transform hover:scale-105">
+              <CardHeader>
+                <CardTitle className="flex items-center">
+                  <Calendar className="mr-2" />
+                  {t("daysSinceQuitting")}
+                </CardTitle>
+              </CardHeader>
+              <CardContent>
+                <p className="text-3xl font-bold text-red-600 dark:text-red-400">
+                  {stats.daysSinceQuitting}
+                </p>
+              </CardContent>
+            </Card>
+          </Link>
+          <Link
             href="/money-saved"
             className="transition-transform hover:scale-105"
           >
             <Card className="h-full">
               <CardHeader>
-                <CardTitle>{t("moneySaved")}</CardTitle>
+                <CardTitle className="flex items-center">
+                  <EuroIcon className="mr-2" />
+                  {t("moneySaved")}
+                </CardTitle>{" "}
               </CardHeader>
               <CardContent>
                 <p className="text-3xl font-bold text-green-600 dark:text-green-400">
-                  €{stats.moneySaved.toFixed(2)}
+                  {formatPrice(stats.moneySaved)}
                 </p>
               </CardContent>
             </Card>
@@ -48,7 +71,10 @@ export default function AshKicker() {
           >
             <Card className="h-full">
               <CardHeader>
-                <CardTitle>{t("cigarettesNotSmoked")}</CardTitle>
+                <CardTitle className="flex items-center">
+                  <Cigarette className="mr-2" />
+                  {t("cigarettesNotSmoked")}
+                </CardTitle>{" "}
               </CardHeader>
               <CardContent>
                 <p className="text-3xl font-bold text-blue-600 dark:text-blue-400">
@@ -63,7 +89,10 @@ export default function AshKicker() {
           >
             <Card className="h-full">
               <CardHeader>
-                <CardTitle>{t("daysOfLifeGained")}</CardTitle>
+                <CardTitle className="flex items-center">
+                  <Heart className="mr-2" />
+                  {t("daysOfLifeGained")}
+                </CardTitle>{" "}
               </CardHeader>
               <CardContent>
                 <p className="text-3xl font-bold text-purple-600 dark:text-purple-400">
@@ -72,16 +101,6 @@ export default function AshKicker() {
               </CardContent>
             </Card>
           </Link>
-          <Card className="h-full transition-transform hover:scale-105">
-            <CardHeader>
-              <CardTitle>{t("daysSinceQuitting")}</CardTitle>
-            </CardHeader>
-            <CardContent>
-              <p className="text-3xl font-bold text-red-600 dark:text-red-400">
-                {stats.daysSinceQuitting}
-              </p>
-            </CardContent>
-          </Card>
         </div>
       </div>
     </div>

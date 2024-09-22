@@ -42,7 +42,7 @@ export default function LanguageSelector() {
       defaultValue={locale}
     >
       <SelectTrigger className={cn("w-[100px]", isPending && "opacity-0")}>
-        <SelectValue placeholder={t("language")} />
+        <SelectValue className="hidden md:flex" placeholder={t("language")} />
       </SelectTrigger>
       <SelectContent>
         {languages.map((language) => (

@@ -2,8 +2,8 @@
   "Common": {
     "title": "Ash Kicker",
     "language": "Language",
-    "searchLanguage": "Search language...",
-    "noLanguageFound": "No language found.",
+    "theme": "Theme",
+    "configuration": "Configuration",
     "backToHome": "Back to Home"
   },
   "AshKicker": {
@@ -51,5 +51,19 @@
     "hours": "hours",
     "days": "days",
     "minutes": "minutes"
+  },
+  "DaysSinceQuitting": {
+    "title": "Time Since Quitting",
+    "timeSinceQuitting": "Time Since Quitting",
+    "months": "Months",
+    "days": "Days",
+    "hours": "Hours",
+    "minutes": "Minutes",
+    "seconds": "Seconds",
+    "environmentalImpact": "Environmental Impact",
+    "waterPollutionAvoided": "Water Pollution Avoided",
+    "co2EmissionsAvoided": "CO2 Emissions Avoided",
+    "liters": "liters",
+    "kg": "kg"
   }
 }

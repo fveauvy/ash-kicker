@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { useTranslations } from "next-intl";
-import { useConfig } from "@/hooks/use-config";
+import { useConfig } from "@/contexts/config-context";
 import { calculateDetailedLifeGained } from "@/lib/calculations";
 import BackButton from "@/components/back-button";
 

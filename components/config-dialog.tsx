@@ -13,7 +13,7 @@ import { Label } from "@/components/ui/label";
 import { Button } from "@/components/ui/button";
 import { RocketIcon, Settings } from "lucide-react";
 import { useTranslations } from "next-intl";
-import { useConfig } from "@/hooks/use-config";
+import { useConfig } from "@/contexts/config-context";
 import { useToast } from "@/hooks/use-toast";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 

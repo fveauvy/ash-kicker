@@ -3,9 +3,10 @@
 import { useState, useEffect } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { useTranslations } from "next-intl";
-import { useConfig } from "@/hooks/use-config";
+import { useConfig } from "@/contexts/config-context";
 import { calculateDetailedMoneySaved } from "@/lib/calculations";
 import BackButton from "@/components/back-button";
+import { formatPrice } from "@/lib/utils";
 
 export default function MoneySavedPage() {
   const t = useTranslations("MoneySaved");
@@ -36,7 +37,7 @@ export default function MoneySavedPage() {
             </CardHeader>
             <CardContent>
               <p className="text-3xl font-bold text-green-600 dark:text-green-400">
-                €{stats.daily.toFixed(2)}
+                {formatPrice(stats.daily)}
               </p>
             </CardContent>
           </Card>
@@ -46,7 +47,7 @@ export default function MoneySavedPage() {
             </CardHeader>
             <CardContent>
               <p className="text-3xl font-bold text-green-600 dark:text-green-400">
-                €{stats.weekly.toFixed(2)}
+                {formatPrice(stats.weekly)}
               </p>
             </CardContent>
           </Card>
@@ -56,7 +57,7 @@ export default function MoneySavedPage() {
             </CardHeader>
             <CardContent>
               <p className="text-3xl font-bold text-green-600 dark:text-green-400">
-                €{stats.monthly.toFixed(2)}
+                {formatPrice(stats.monthly)}
               </p>
             </CardContent>
           </Card>
@@ -66,7 +67,7 @@ export default function MoneySavedPage() {
             </CardHeader>
             <CardContent>
               <p className="text-3xl font-bold text-green-600 dark:text-green-400">
-                €{stats.yearly.toFixed(2)}
+                {formatPrice(stats.yearly)}
               </p>
             </CardContent>
           </Card>
@@ -76,7 +77,7 @@ export default function MoneySavedPage() {
             </CardHeader>
             <CardContent>
               <p className="text-3xl font-bold text-green-600 dark:text-green-400">
-                €{stats.total.toFixed(2)}
+                {formatPrice(stats.total)}
               </p>
             </CardContent>
           </Card>

@@ -102,3 +102,26 @@ export function calculateDetailedLifeGained(config: Config): DetailedStats {
     total,
   };
 }
+
+export function calculateTimeSinceQuitting(quitDate: string) {
+  const now = new Date();
+  const quit = new Date(quitDate);
+  const diff = now.getTime() - quit.getTime();
+
+  const months = Math.floor(diff / (1000 * 60 * 60 * 24 * 30.44));
+  const days = Math.floor(
+    (diff % (1000 * 60 * 60 * 24 * 30.44)) / (1000 * 60 * 60 * 24)
+  );
+  const hours = Math.floor((diff % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+  const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+  const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+  return { months, days, hours, minutes, seconds };
+}
+
+export function calculateEnvironmentalImpact(cigarettesNotSmoked: number) {
+  const waterPolluted = cigarettesNotSmoked * 3.7; // liters
+  const co2Contribution = (cigarettesNotSmoked * 14) / 1000; // kg
+
+  return { waterPolluted, co2Contribution };
+}
