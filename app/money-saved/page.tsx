@@ -1,14 +1,15 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, Suspense } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { useTranslations } from "next-intl";
 import { useConfig } from "@/contexts/config-context";
 import { calculateDetailedMoneySaved } from "@/lib/calculations";
 import BackButton from "@/components/back-button";
 import { formatPrice } from "@/lib/utils";
+import LoadingSkeleton from "@/components/loading-skeleton";
 
-export default function MoneySavedPage() {
+function MoneySavedContent() {
   const t = useTranslations("MoneySaved");
   const { config } = useConfig();
   const [stats, setStats] = useState({
@@ -84,5 +85,13 @@ export default function MoneySavedPage() {
         </div>
       </div>
     </div>
+  );
+}
+
+export default function MoneySavedPage() {
+  return (
+    <Suspense fallback={<LoadingSkeleton />}>
+      <MoneySavedContent />
+    </Suspense>
   );
 }

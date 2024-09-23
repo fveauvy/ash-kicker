@@ -7,6 +7,7 @@ import { ThemeProvider } from "next-themes";
 import { Toaster } from "@/components/ui/toaster";
 import { ConfigProvider } from "@/contexts/config-context";
 import HeaderControls from "@/components/header-controls";
+import { LoadingBar } from "@/components/loading-bar";
 
 const geistSans = localFont({
   src: "./fonts/GeistVF.woff",
@@ -42,6 +43,7 @@ export default function RootLayout({
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <NextIntlClientProvider messages={messages} locale={locale}>
             <ConfigProvider>
+              <LoadingBar />
               <Toaster />
               <div className="min-h-screen bg-background text-foreground">
                 <header className="container mx-auto pt-4 px-4 flex flex-col md:flex-row md:justify-between md:items-center">
