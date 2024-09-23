@@ -33,7 +33,7 @@ export default function AshKicker() {
             href="/days-since-quitting"
             className="transition-transform hover:scale-105"
           >
-            <Card className="h-full transition-transform hover:scale-105">
+            <Card className="h-full hover:bg-muted/50 transition-colors duration-200">
               <CardHeader>
                 <CardTitle className="flex items-center">
                   <Calendar className="mr-2" />
@@ -51,12 +51,12 @@ export default function AshKicker() {
             href="/money-saved"
             className="transition-transform hover:scale-105"
           >
-            <Card className="h-full">
+            <Card className="h-full hover:bg-muted/50 transition-colors duration-200">
               <CardHeader>
                 <CardTitle className="flex items-center">
                   <EuroIcon className="mr-2" />
                   {t("moneySaved")}
-                </CardTitle>{" "}
+                </CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-3xl font-bold text-green-600 dark:text-green-400">
@@ -69,12 +69,12 @@ export default function AshKicker() {
             href="/not-smoked"
             className="transition-transform hover:scale-105"
           >
-            <Card className="h-full">
+            <Card className="h-full hover:bg-muted/50 transition-colors duration-200">
               <CardHeader>
                 <CardTitle className="flex items-center">
                   <Cigarette className="mr-2" />
                   {t("cigarettesNotSmoked")}
-                </CardTitle>{" "}
+                </CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-3xl font-bold text-blue-600 dark:text-blue-400">
@@ -87,12 +87,12 @@ export default function AshKicker() {
             href="/life-gained"
             className="transition-transform hover:scale-105"
           >
-            <Card className="h-full">
+            <Card className="h-full hover:bg-muted/50 transition-colors duration-200">
               <CardHeader>
                 <CardTitle className="flex items-center">
                   <Heart className="mr-2" />
                   {t("daysOfLifeGained")}
-                </CardTitle>{" "}
+                </CardTitle>
               </CardHeader>
               <CardContent>
                 <p className="text-3xl font-bold text-purple-600 dark:text-purple-400">
