@@ -38,10 +38,10 @@ export default function LanguageSelector() {
     <Select
       open={open}
       onOpenChange={setOpen}
-      onValueChange={onChange}
+      onValueChange={(value) => onChange(value as Locale)}
       defaultValue={locale}
     >
-      <SelectTrigger className={cn("w-[100px]", isPending && "opacity-0")}>
+      <SelectTrigger className={cn("w-[100px]", isPending && "opacity-50")}>
         <SelectValue className="hidden md:flex" placeholder={t("language")} />
       </SelectTrigger>
       <SelectContent>
